@@ -1,71 +1,63 @@
 import os
 import threading
+import time
+import importlib
+import signal
+import threading
+from fastapi import FastAPI
+from fastapi.middleware.gzip import GZipMiddleware
 
 from modules.paths import script_path
 
-import torch
-from omegaconf import OmegaConf
-
-import signal
-
-from ldm.util import instantiate_from_config
-
-from modules.shared import opts, cmd_opts, state
-import modules.shared as shared
-import modules.ui
-import modules.scripts
-import modules.sd_hijack
-import modules.codeformer_model
-import modules.gfpgan_model
-import modules.face_restoration
-import modules.realesrgan_model as realesrgan
-import modules.esrgan_model as esrgan
+from modules import devices, sd_samplers, upscaler
+import modules.codeformer_model as codeformer
 import modules.extras
-import modules.lowvram
-import modules.txt2img
+import modules.face_restoration
+import modules.gfpgan_model as gfpgan
 import modules.img2img
 
+import modules.lowvram
+import modules.paths
+import modules.scripts
+import modules.sd_hijack
+import modules.sd_models
+import modules.shared as shared
+import modules.txt2img
 
-modules.codeformer_model.setup_codeformer()
-modules.gfpgan_model.setup_gfpgan()
-shared.face_restorers.append(modules.face_restoration.FaceRestoration())
-
-esrgan.load_models(cmd_opts.esrgan_models_path)
-realesrgan.setup_realesrgan()
-
-
-def load_model_from_config(config, ckpt, verbose=False):
-    print(f"Loading model [{shared.sd_model_hash}] from {ckpt}")
-    pl_sd = torch.load(ckpt, map_location="cpu")
-    if "global_step" in pl_sd:
-        print(f"Global Step: {pl_sd['global_step']}")
-    sd = pl_sd["state_dict"]
-
-    model = instantiate_from_config(config.model)
-    m, u = model.load_state_dict(sd, strict=False)
-    if len(m) > 0 and verbose:
-        print("missing keys:")
-        print(m)
-    if len(u) > 0 and verbose:
-        print("unexpected keys:")
-        print(u)
-    if cmd_opts.opt_channelslast:
-        model = model.to(memory_format=torch.channels_last)
-    model.eval()
-    return model
-
+import modules.ui
+from modules import devices
+from modules import modelloader
+from modules.paths import script_path
+from modules.shared import cmd_opts
+import modules.hypernetworks.hypernetwork
 
 queue_lock = threading.Lock()
 
 
-def wrap_gradio_gpu_call(func):
+def wrap_queued_call(func):
     def f(*args, **kwargs):
+        with queue_lock:
+            res = func(*args, **kwargs)
+
+        return res
+
+    return f
+
+
+def wrap_gradio_gpu_call(func, extra_outputs=None):
+    def f(*args, **kwargs):
+        devices.torch_gc()
+
         shared.state.sampling_step = 0
         shared.state.job_count = -1
         shared.state.job_no = 0
+        shared.state.job_timestamp = shared.state.get_job_timestamp()
         shared.state.current_latent = None
         shared.state.current_image = None
         shared.state.current_image_sampling_step = 0
+        shared.state.skipped = False
+        shared.state.interrupted = False
+        shared.state.textinfo = None
 
         with queue_lock:
             res = func(*args, **kwargs)
@@ -73,43 +65,33 @@ def wrap_gradio_gpu_call(func):
         shared.state.job = ""
         shared.state.job_count = 0
 
+        devices.torch_gc()
+
         return res
 
-    return modules.ui.wrap_gradio_call(f)
+    return modules.ui.wrap_gradio_call(f, extra_outputs=extra_outputs)
 
 
-modules.scripts.load_scripts(os.path.join(script_path, "scripts"))
+def initialize():
+    if cmd_opts.ui_debug_mode:
+        shared.sd_upscalers = upscaler.UpscalerLanczos().scalers
+        modules.scripts.load_scripts()
+        return
 
-try:
-    # this silences the annoying "Some weights of the model checkpoint were not used when initializing..." message at start.
+    modelloader.cleanup_models()
+    modules.sd_models.setup_model()
+    codeformer.setup_model(cmd_opts.codeformer_models_path)
+    gfpgan.setup_model(cmd_opts.gfpgan_models_path)
+    shared.face_restorers.append(modules.face_restoration.FaceRestoration())
+    modelloader.load_upscalers()
 
-    from transformers import logging
+    modules.scripts.load_scripts()
 
-    logging.set_verbosity_error()
-except Exception:
-    pass
+    modules.sd_models.load_model()
+    shared.opts.onchange("sd_model_checkpoint", wrap_queued_call(lambda: modules.sd_models.reload_model_weights(shared.sd_model)))
+    shared.opts.onchange("sd_hypernetwork", wrap_queued_call(lambda: modules.hypernetworks.hypernetwork.load_hypernetwork(shared.opts.sd_hypernetwork)))
+    shared.opts.onchange("sd_hypernetwork_strength", modules.hypernetworks.hypernetwork.apply_strength)
 
-with open(cmd_opts.ckpt, "rb") as file:
-    import hashlib
-    m = hashlib.sha256()
-
-    file.seek(0x100000)
-    m.update(file.read(0x10000))
-    shared.sd_model_hash = m.hexdigest()[0:8]
-
-sd_config = OmegaConf.load(cmd_opts.config)
-shared.sd_model = load_model_from_config(sd_config, cmd_opts.ckpt)
-shared.sd_model = (shared.sd_model if cmd_opts.no_half else shared.sd_model.half())
-
-if cmd_opts.lowvram or cmd_opts.medvram:
-    modules.lowvram.setup_for_low_vram(shared.sd_model, cmd_opts.medvram)
-else:
-    shared.sd_model = shared.sd_model.to(shared.device)
-
-modules.sd_hijack.model_hijack.hijack(shared.sd_model)
-
-
-def webui():
     # make the program just exit at ctrl+c without waiting for anything
     def sigint_handler(sig, frame):
         print(f'Interrupted with signal {sig} in {frame}')
@@ -117,21 +99,72 @@ def webui():
 
     signal.signal(signal.SIGINT, sigint_handler)
 
-    demo = modules.ui.create_ui(
-        txt2img=wrap_gradio_gpu_call(modules.txt2img.txt2img),
-        img2img=wrap_gradio_gpu_call(modules.img2img.img2img),
-        run_extras=wrap_gradio_gpu_call(modules.extras.run_extras),
-        run_pnginfo=modules.extras.run_pnginfo
-    )
 
-    demo.launch(
-        share=cmd_opts.share,
-        server_name="0.0.0.0" if cmd_opts.listen else None,
-        server_port=cmd_opts.port,
-        debug=cmd_opts.gradio_debug,
-        auth=[tuple(cred.split(':')) for cred in cmd_opts.gradio_auth.strip('"').split(',')] if cmd_opts.gradio_auth else None,
-    )
+def create_api(app):
+    from modules.api.api import Api
+    api = Api(app, queue_lock)
+    return api
+
+def wait_on_server(demo=None):
+    while 1:
+        time.sleep(0.5)
+        if demo and getattr(demo, 'do_restart', False):
+            time.sleep(0.5)
+            demo.close()
+            time.sleep(0.5)
+            break
+
+def api_only():
+    initialize()
+
+    app = FastAPI()
+    app.add_middleware(GZipMiddleware, minimum_size=1000)
+    api = create_api(app)
+
+    api.launch(server_name="0.0.0.0" if cmd_opts.listen else "127.0.0.1", port=cmd_opts.port if cmd_opts.port else 7861)
 
 
+def webui():
+    launch_api = cmd_opts.api
+    initialize()
+
+    while 1:
+        demo = modules.ui.create_ui(wrap_gradio_gpu_call=wrap_gradio_gpu_call)
+
+        app, local_url, share_url = demo.launch(
+            share=cmd_opts.share,
+            server_name="0.0.0.0" if cmd_opts.listen else None,
+            server_port=cmd_opts.port,
+            debug=cmd_opts.gradio_debug,
+            auth=[tuple(cred.split(':')) for cred in cmd_opts.gradio_auth.strip('"').split(',')] if cmd_opts.gradio_auth else None,
+            inbrowser=cmd_opts.autolaunch,
+            prevent_thread_lock=True
+        )
+        # after initial launch, disable --autolaunch for subsequent restarts
+        cmd_opts.autolaunch = False
+
+        app.add_middleware(GZipMiddleware, minimum_size=1000)
+
+        if (launch_api):
+            create_api(app)
+
+        wait_on_server(demo)
+
+        sd_samplers.set_samplers()
+
+        print('Reloading Custom Scripts')
+        modules.scripts.reload_scripts()
+        print('Reloading modules: modules.ui')
+        importlib.reload(modules.ui)
+        print('Refreshing Model List')
+        modules.sd_models.list_models()
+        print('Restarting Gradio')
+
+
+
+task = []
 if __name__ == "__main__":
-    webui()
+    if cmd_opts.nowebui:
+        api_only()
+    else:
+        webui()
