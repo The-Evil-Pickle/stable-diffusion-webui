@@ -1,0 +1,8 @@
+kneehighs
+leggings
+leg warmers
+over-kneehighs
+pantyhose
+socks
+socks, {ankle socks|bobby socks|loose socks|tabi|toe socks|tube socks}
+thighhighs

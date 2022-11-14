@@ -4,6 +4,7 @@ import random
 
 import numpy as np
 
+import scripts.dynamic_prompting as dynamic_prompting
 import modules.scripts as scripts
 import gradio as gr
 
@@ -133,6 +134,9 @@ class Script(scripts.Script):
         with gr.Row():
             x_type = gr.Dropdown(label="X type", choices=[x.label for x in current_axis_options], value=current_axis_options[1].label, visible=False, type="index", elem_id="x_type")
             x_values = gr.Textbox(label="X values", visible=False, lines=1)
+        with gr.Row():
+            x2_type = gr.Dropdown(label="X type 2", choices=[x.label for x in current_axis_options], value=current_axis_options[1].label, visible=False, type="index", elem_id="x2_type")
+            x2_values = gr.Textbox(label="X values 2", visible=False, lines=1)
 
         with gr.Row():
             y_type = gr.Dropdown(label="Y type", choices=[x.label for x in current_axis_options], value=current_axis_options[4].label, visible=False, type="index", elem_id="y_type")
@@ -140,10 +144,11 @@ class Script(scripts.Script):
         
         draw_legend = gr.Checkbox(label='Draw legend', value=True)
         randseed = gr.Checkbox(label='Random seeds', value=False)
+        subscript = gr.Dropdown(label="Secondary Script", choices=["none", "dynamic prompts"], value="none", visible=False, type="index", elem_id="subscript")
             
-        return [x_type, x_values, y_type, y_values, draw_legend, randseed]
+        return [x_type, x_values, x2_type, x2_values, y_type, y_values, draw_legend, randseed, subscript]
 
-    def run(self, p, x_type, x_values, y_type, y_values, draw_legend, randseed):
+    def run(self, p, x_type, x_values, x2_type, x2_values, y_type, y_values, draw_legend, randseed, subscript):
         modules.processing.fix_seed(p)
         p.batch_size = 1
 
@@ -203,13 +208,20 @@ class Script(scripts.Script):
         x_opt = axis_options[x_type]
         xs = process_axis(x_opt, x_values)
 
+        x2_opt = axis_options[x2_type]
+        x2s = process_axis(x2_opt, x2_values)
+
         y_opt = axis_options[y_type]
         ys = process_axis(y_opt, y_values)
 
         def cell(x, y):
             pc = copy(p)
             x_opt.apply(pc, x, xs)
+            if x2_type > 0:
+                x2_opt.apply(pc, x, x2s)
             y_opt.apply(pc, y, ys)
+            if subscript == 1:
+                pc.prompt = dynamic_prompting.generate_prompt(pc.prompt)
             if randseed:
                 setattr(pc, "seed", random.randrange(2147000000))
             return process_images(pc)

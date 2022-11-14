@@ -1,0 +1,2 @@
+{1-4$$maid|frilled dress|maid apron|standing|cat ears|maid headdress|long hair|elbow gloves}
+maid, {1-4$$frilled dress|maid apron|standing|cat ears|maid headdress|long hair|elbow gloves}

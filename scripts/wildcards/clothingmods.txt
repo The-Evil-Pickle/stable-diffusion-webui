@@ -1,0 +1,4 @@
+{$$1-5__sleevetype__|frills|bare shoulders|midriff|__colors/leg__ legwear}
+{$$1-5__sleevetype__|frills|bare shoulders|midriff|__color__ sleeves|__colors/leg__ legwear|skindentation|cleavage cutout|fur trim|buttons}
+{japanese|chinese|ainu|biker|winter|taut|torn|wet|dirty|oversized|undersized|shiny|revealing|open|impossible|loose|cross-laced|ribbon-trimmed|layered} clothes
+{japanese|chinese|ainu|biker|winter|taut|torn|wet|dirty|oversized|undersized|shiny|revealing|open|impossible|loose|cross-laced|ribbon-trimmed|layered} clothes, {$$1-5__sleevetype__|frills|bare shoulders|midriff|__color__ sleeves|__color__ legwear|skindentation}

@@ -1,0 +1,10 @@
+dress
+dress
+__colors/dress__ dress
+dress, __colors/dress__ dress
+armored dress
+frilled dress
+__colors1__ dress, frilled dress
+maid
+dress, __clothes/dress__
+dress, __colors/dress__ dress, __clothes/dress__

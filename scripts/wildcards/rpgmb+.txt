@@ -1,0 +1,4 @@
+{(rpgmb2:0.75)|(rpgmb2:0.65)|(rpgmb2:0.6)|(rpgmb2:0.8)|(rpgmb2:0.7)|(rpgmb2:0.85)}
+{(rpgmb2:0.75)|(rpgmb2:0.65)|(rpgmb2:0.8)|(rpgmb2:0.7)}
+{(rpgmb2:0.75)|(rpgmb2:0.65)|(rpgmb2:0.6)|(rpgmb2:0.5)|(rpgmb2:0.9)|(rpgmb2:0.8)|(rpgmb2:0.7)|(rpgmb2:0.85)}
+{(rpgmb2:0.75)|(rpgmb2:0.65)|(rpgmb2:0.8)|(rpgmb2:0.7)|(rpgmb2-1000:0.9)|(rpgmb2-1000:0.8)|(rpgmb2-1000:0.7)|(rpgmb2-2500:0.9)|(rpgmb2-2500:0.8)|(rpgmb2-2500:0.7)}

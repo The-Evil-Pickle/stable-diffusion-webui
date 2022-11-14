@@ -1,0 +1,6 @@
+{wolf girl, __chest__|werewolf, __chest50__}, {1-4$$wolf ears|wolf tail|sharp teeth|fang|fangs|fluffy|body fur|snout}
+cat girl, {1-5$$cat ears|cat tail|tail raised|tail ornament|bell|fang|slit pupils}
+fox girl, {1-4$$fox ears|fox tail|kitsune|multiple tails|body fur|tail raised}
+cow girl, {1-6$$cow horns|horns|cow ears|cow tail|cow print|__chest99__|cowbell|ear tag|milk}
+rabbit girl, {rabbit ears|rabbit tail|body fur|animal nose}
+mouse girl, {mouse ears|mouse tail|whiskers}

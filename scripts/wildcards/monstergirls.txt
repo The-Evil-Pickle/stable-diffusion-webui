@@ -1,0 +1,11 @@
+mermaid, {1-6$$head fins|scales|__weapons__|bubble|gills|colored skin|sharp teeth|__chest__}, {shell bikini|breastplate|sarashi|chainmail|bikini|no bra, no nipples}, {long hair|very long hair|__hair__}, __eyes__
+lamia, {0-6$$scales|forked tounge|snake hair|long tounge|slit pupils|__chest50__|colored skin}, __weapons__, __hair__, {green eyes|yellow eyes|red eyes|purple eyes|__eyes__|colored sclera}
+harpy, {0-6$$winged arms|bird legs|talons|feathers|feathered wings|tail feathers|wings}, __chest__, {__hair__|short hair}
+{orc|goblin}, {0-4$$tusks|green skin|bald|colored skin|pointy ears}, {__classes__|__weapons__|__clothes__}, __chest50__, __hair50__
+slime girl, slime \(substance\), {1-4$$colored sclera|colored skin|core|see-through body|translucent skin}, {1-3$$__chest__|short hair|tail|tentacles}
+plant girl, {__classes__|nude, __weapons__}, {1-6$$alraune|plant hair|dryad|green skin|colored skin|vines|plant|leaf|thorns|flower|green hair|__chest50__}
+{arthropod girl|spider girl}, {1-6$$taur|extra eyes|carapace|multiple legs|spider|extra arms|extra legs|arthropod limbs}
+zombie, {1-9$$patchwork skin|torn clothes|collored skin|messy hair|__chest__|sharp teeth|bandages|purple tongue|colored skin|armor|stitches|teeth|blood|empty eyes|__weapons__|__clothes__}
+robot girl, {__classes__|__clothing__|__clothing__, __weapons__|nude|gun}, {1-4$$bald|__chest__|metal skin|robot joints|humanoid robot|glowing eyes|colored sclera, no pupils}
+fairy, {1-3$$fairy wings|wings|butterfly wings|pointy ears}, {__chest__|breasts, small breasts|__chest50__}
+demon girl, {1-6$$demon|{{blue|red|purple|blue} skin, colored skin|dark skin}|horns|demon horns|demon wings|demon tail|breasts}, __chest__

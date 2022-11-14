@@ -1,0 +1,5 @@
+{1-2$$socks|__colors/socks__ socks}
+socks, {__colors/socks__ socks|__colors/socks__ socks, kneehighs|__colors/socks__ socks, ankle socks}
+__colors/leg__ legwear
+{__colors/leg__|__colors/socks__} {thighhighs|thighhighs, socks}
+{1-2$$pantyhose|__colors/socks__ pantyhose}

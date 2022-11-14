@@ -1,0 +1,31 @@
+blouse
+blouse, {frilled shirt|sleeveless shirt}
+bustier
+crop top
+camisole
+cardigan
+cardigan, cardigan vest
+coat
+coat, {duffel coat|fur coat|fur-trimmed coat|long coat|overcoat|peacoat|raincoat|trench coat|winter coat}
+compression shirt
+corset
+dress
+halterneck
+hoodie
+jacket
+jacket, {blazer|cropped jacket|letterman jacket|safari jacket|suit jacket|sukajan|trench coat}
+poncho
+shirt
+shirt, {collared shirt|dress shirt|off-shoulder shirt|sleeveless shirt|striped shirt|t-shirt}
+shirt, __colors/shirt__ shirt
+shirt, __colors/shirt__ shirt, {collared shirt|dress shirt|off-shoulder shirt|sleeveless shirt|striped shirt|t-shirt}
+shrug
+surcoat
+sweater
+sweater, {pullover|turtleneck|sweater dress|ribbed sweater|aran sweater}
+tabard
+tailcoat
+tank top
+tube top
+underbust
+vest

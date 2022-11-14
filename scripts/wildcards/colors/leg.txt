@@ -1,0 +1,14 @@
+black
+black
+black
+black
+black
+white
+white
+white
+white
+striped
+{brown|red}
+{blue|purple}
+{pink|grey|print}
+{orange|yellow|green|argyle}

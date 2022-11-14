@@ -1,0 +1,15 @@
+black
+black
+black
+blue
+blue
+blue
+red
+red
+plaid
+plaid
+green
+white
+grey
+pink
+purple

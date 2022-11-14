@@ -1,0 +1,5 @@
+{1-2$$messy hair|ahoge|hair over one eye|parted bangs|antenna hair}
+{1-2$$hair rings|twintails|sidelocks|double bun}
+{ponytail|side ponytail|braid|hair bun|two side up|bob cut}
+{wavy hair|curly hair}
+{wavy hair|curly hair}, {1-2$$messy hair|ahoge|ponytail|hair over one eye|parted bangs|antenna hair}

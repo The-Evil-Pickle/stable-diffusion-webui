@@ -1,0 +1,8 @@
+glowing eyes
+empty eyes
+red eyes
+{yellow|green|red|orange|purple} {eyes|eyes, split pupils}
+{heart-shaped pupils|slit pupils|no pupils}
+colored sclera
+heterochromia, {1-2$$__colors/eyes__ eyes|__colors/eyes__ eyes}
+third eye

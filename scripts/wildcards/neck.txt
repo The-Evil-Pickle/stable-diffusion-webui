@@ -1,0 +1,10 @@
+ribbon, __colors/bowribbon__ ribbon
+necktie, {__colors/bowribbon__ necktie|__colors/dress__ necktie|red necktie}
+collarbone
+collarbone
+{1-2$$sailor collar|serafuku}
+bowtie, __colors/bowribbon__ bowtie
+scarf, __colors/skirt__ scarf
+choker, {black choker|__colors/bowribbon__ neckwear}
+neckerchief, {__colors/bowribbon__ neckerchief|__colors/dress__ neckerchief|__color__ neckerchief}
+{ascot|jabot|necklace}

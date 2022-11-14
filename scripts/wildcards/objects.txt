@@ -1,0 +1,1 @@
+{1-3$$vase|plant|clock|bookcase|flask|painting \(object\)|candle|tree|doll|leaves|locker|box|chair|table|windowsill|lantern|branch|building}

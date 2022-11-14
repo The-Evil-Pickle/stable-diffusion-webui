@@ -1,0 +1,4 @@
+{dress|__fs/1/colors__ dress|__colors/dress__ dress}
+shirt, {skirt|long skirt|pants|skirt, __fs/1/colors__ skirt}
+shirt, {__fs/1/colors__|__colors/shirt__} shirt, {skirt|long skirt|pants}
+__clothes__

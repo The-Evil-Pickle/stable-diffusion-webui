@@ -1,0 +1,8 @@
+skirt
+skirt
+skirt
+__colors1__ skirt
+__colors1__ skirt
+{miniskirt|long skirt|high-waist skirt|pencil skirt}
+__colors1__ skirt, {miniskirt|long skirt|high-waist skirt|pencil skirt|frilled skirt}
+{leather skirt|frilled skirt|pleated skirt}

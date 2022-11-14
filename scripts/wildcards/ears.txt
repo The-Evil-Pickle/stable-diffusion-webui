@@ -1,0 +1,6 @@
+animal ears, {cat|wolf|fox|bunny|dog|cow} ears
+animal ears
+pointy ears
+(pointy ears:-0.5)
+no ears
+__dan/dan_ears__

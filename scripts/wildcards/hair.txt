@@ -1,0 +1,5 @@
+bangs, __dan/dan_hair__
+{1-3$$__haircolor__|__hairlength__|__hairstyle__}, bangs
+__haircolor__, __hairlength__, {1-2$$bangs|__hairstyle__}
+{2-4$$__haircolor__|__hairlength__|__hairstyle__|bangs}
+{afro|hime cut|crew cut|pixie cut|undercut|dreadlocks|spiked hair}, __haircolor__

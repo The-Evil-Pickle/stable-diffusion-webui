@@ -1,0 +1,4 @@
+shoes
+no shoes
+shoes, {loafers|uwabaki|dress shoes}
+{1-2$$boots|__dan/dan_boots__}

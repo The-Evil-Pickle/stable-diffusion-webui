@@ -1,0 +1,2 @@
+{1-2$$__races__|__classes__}, __hair__, __eyes__, __chest__,
+monster girl, {__monsterparts__|__monstergirls__}

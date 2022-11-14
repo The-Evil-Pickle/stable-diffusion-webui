@@ -1,0 +1,3 @@
+{1-6$$aroused|slight smile|parted lips|[sigh]|half-closed eyes|sleepy|blush|[drunk]}
+{1-3$$naughty face|exhausted, smile|blush|trembling}
+{embarrassed|[surprised]}, {1-3$$blush|tears|[worried]|looking at viewer|[nervous]|tearing up}

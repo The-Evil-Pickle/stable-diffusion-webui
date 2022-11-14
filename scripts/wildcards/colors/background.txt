@@ -1,0 +1,20 @@
+#white:839k
+white
+white
+white
+white
+white
+#grey:152k
+grey
+grey
+{grey|white}
+#50-90k
+blue
+pink
+gradient
+#14-30k
+{brown|red}
+{purple|green}
+{orange|yellow|yellow}
+#7-10k
+{aqua|striped|checkered|polka dot}

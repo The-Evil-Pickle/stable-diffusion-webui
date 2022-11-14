@@ -1,0 +1,5 @@
+{sleeveless|long sleeves|short sleeves}
+{sleeveless|long sleeves|short sleeves|detached sleeves|sleeves pushed up|sleeves past wrists|sleeves past elbows|very long sleeves|uneven sleeves|torn sleeves}
+{sleeveless|long sleeves|short sleeves|detached sleeves|sleeves past wrists|sleeves past elbows|very long sleeves}
+{raglan|puffy|wide|frilled|ribbon-trimmed} sleeves, {long sleeves|short sleeves|detached sleeves|sleeves past wrists|sleeves past elbows|very long sleeves}
+{raglan|puffy|wide|frilled|ribbon-trimmed|juliet|puffy short|puffy long|layered|torn} sleeves

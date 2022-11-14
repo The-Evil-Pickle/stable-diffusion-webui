@@ -1,0 +1,7 @@
+black
+black
+black
+white
+white
+white
+{red|grey|striped|blue|blue|white}

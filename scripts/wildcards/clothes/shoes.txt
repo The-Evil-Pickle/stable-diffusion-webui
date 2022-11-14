@@ -1,0 +1,20 @@
+boots
+boots, {ankle boots|armored boots|knee boots|high heel boots|lace-up boots|rubber boots|thigh boots|cowboy boots}
+cross-laced footwear
+flats
+footwear ribbon
+high heels
+loafers
+mary janes
+platform footwear
+pointy footwear
+pumps
+sandals
+oxfords
+monk shoes
+slippers
+sneakers
+toeless footwear
+uwabaki
+winged footwear
+wedge heels

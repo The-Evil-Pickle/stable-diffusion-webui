@@ -1,0 +1,15 @@
+aqua hair
+black hair
+blonde hair
+blue hair
+brown hair
+green hair
+grey hair
+orange hair
+pink hair
+purple hair
+red hair
+white hair
+{two-tone hair|streaked hair|colored inner hair|split-color hair}, {2$$black hair|blue hair|blonde hair|green hair|orange hair|pink hair|purple hair|red hair|white hair}
+{rainbow hair|alternate hair color|[translucent hair]}
+{brown hair|light brown hair|blonde hair|black hair}

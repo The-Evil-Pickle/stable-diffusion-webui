@@ -1,0 +1,14 @@
+bikesuit
+bodystocking
+bodysuit
+jumpsuit
+leotard
+swimsuit
+swimsuit, {competition swimsuit|slingshot swimsuit|school swimsuit|bikini|sports bikini|tankini|criss-cross halter|swim briefs|jammers|legskin}
+rash guard
+robe
+kesa
+romper
+sarong
+tunic
+unitard

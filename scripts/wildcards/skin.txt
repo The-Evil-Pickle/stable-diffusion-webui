@@ -1,0 +1,3 @@
+dark skin
+{colored skin|blue skin|green skin|purple skin}
+{1-2$$see-through body|translucent skin}

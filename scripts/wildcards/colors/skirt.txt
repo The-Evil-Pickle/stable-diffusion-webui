@@ -1,0 +1,24 @@
+black
+black
+black
+black
+black
+black
+blue
+blue
+blue
+blue
+red
+red
+red
+white
+white
+plaid
+plaid
+brown
+purple
+pink
+grey
+green
+{orange|yellow}
+{aqua|striped|striped|polka dot|print|print}

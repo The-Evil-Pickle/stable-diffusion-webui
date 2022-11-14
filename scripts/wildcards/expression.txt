@@ -1,0 +1,6 @@
+{closed mouth|open mouth|parted lips}
+{closed mouth|open mouth|parted lips}
+{closed mouth|open mouth|parted lips}, {smile|angry|sad|upset|grin|nervous|expressionless|doyagao|[aroused]|flustered}
+{annoyed|angry|disappointed|flustered|guilt|happy|expressionless|pout|sad|scared|nervous|sleepy|tired|surprised|wince|upset|embarrassed|grin|smile|smirk|doyagao}
+blush, {flustered|guilt|pout|sleepy|[in heat]|smile|aroused}
+{;\)|:d|:3|xd|uwu|:p|:/|:o|o3o|>:\)|>:\(}

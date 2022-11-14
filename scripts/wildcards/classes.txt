@@ -1,0 +1,26 @@
+#knight
+{knight|knight, armor|knight, sword|armor, __weapons__}
+#bandit
+{1-5$$cloak|hood|fighting stance|holding knife|mask|eyepatch}
+#mage
+{1-4$$witch|cape|glasses|open book|floating book|floating object|capelet}, {dress|__clothes__}
+#brawler
+{muscular|muscular female}, {1-2$$clenched fists|hand wraps|sarashi|[punching]|torn clothe|biker clothes|jacket}
+dark-skinned female, {__clothes__|__weapons__}
+magical girl, {dress|frilled dress}, {wand|book|:d|pink hair|heart}
+maid, {1-3$$frills|frilled dress|apron|holding|broom}
+{1-3$$|weapon|holding wapon|holding}, {armor|__clothes__}
+{doctor|nurse}, {1-3$$stethoscope|labcoat|medical scrubs|glasses}
+{1-2$$jester|harlequin|clown}, {1-4$$jester cap|facepaint|neck ruff|harem pants|pom pom \(clothes\)|clown nose}
+priest, {1-4$$cassock|stole|cross|mitre|staff}
+gun, holding gun, holding weapon, weapon, __clothes__
+trenchcoat, hat, brown coat, {coat|cloak}
+{1-6$$baseball cap, hat|helmet, baseball helmet|layered sleeves, short over long sleeves|softball uniform|baseball uniform|sportswear|baseball bat|white shorts|bike shorts, bike shorts under shorts}
+{1-10$$steampunk|goggles|googles on headwear|goggles on head|top hat|corset|mechanical arms|monocle|fantasy|single mechanical arm|pouch|wrench}
+{2-16$$black capelet|black gloves|black mask|black robe|capelet|coat|doctor|feathers|gloves|hat|leather|long coat|mask|overcoat|plague doctor|plague doctor mask|robe|top hat|white mask}
+cheerleader, {1-8$$bare arms|bare shoulders|__colors/bowribbon__ socks|__colors/bowribbon__ skirt|crop top|clothes writing|pom pom \(cheerleading\)|midriff|navel|skirt|pleated skirt|sneakers}
+meme attire, {1-2$$__weapons__|cat lingerie|virgin killer sweater|open-chest sweater|cat cutout|reverse outfit|wardrobe error}
+suit, {1-10$$necktie|long sleeves|gun, holding, holding gun, holding weapon, weapon|formal|belt|black suit|collared shirt|dress shirt|glasses|black gloves|gloves|sunglasses}
+soldier, {1-8$$boots|gun|helmet|jacket|military|military uniform|military helmet|green headwear|weapon on back}
+__clothes__
+{1-4$$astronaut|space helmet|space suit|fishbowl helmet}

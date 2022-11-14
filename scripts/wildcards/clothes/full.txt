@@ -1,0 +1,44 @@
+bikesuit
+bodystocking
+bodysuit
+jumpsuit
+leotard
+swimsuit
+swimsuit, {competition swimsuit|slingshot swimsuit|school swimsuit|bikini|sports bikini|tankini|criss-cross halter|swim briefs|jammers|legskin}
+rash guard
+robe
+kesa
+romper
+sarong
+tunic
+unitard
+apron
+armor
+band uniform
+cape
+cassock
+cheerleader
+costume
+ghost costume
+gym uniform
+habit
+harem outfit
+loincloth
+hazmat suit
+kigurumi
+maid
+miko
+military uniform
+overalls
+pajamas
+pilot suit
+sailor
+santa costume
+school uniform
+school uniform, {serafuku|sailor dress|gakuran|meiji schoolgirl uniform}
+shosei
+suit
+suit, {business suit|pant suit|skirt suit|tuxedo}
+tutu
+waitress
+cowboy western

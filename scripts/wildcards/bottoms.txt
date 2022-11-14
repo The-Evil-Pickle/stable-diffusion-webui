@@ -1,0 +1,5 @@
+__dan/dan_pants__
+{pants|shorts|short shorts}
+__skirts__
+__dan/dan_skirts__
+panties

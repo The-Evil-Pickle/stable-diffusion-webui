@@ -1,0 +1,3 @@
+{spear|sword|bow|axe}
+{holding|holding weapon}, {spear|sword|bow|axe}
+{1-2$$huge weapon|blood on weapon|holding weapon}, {spear|sword|bow|axe}

@@ -1,0 +1,11 @@
+standing
+standing
+sitting
+lying
+kneeling
+standing, {1-2$$leaning forward|leaning on object|leg lift|legs apart|fighting stance|knees together feet apart}
+sitting, {1-4$$__sittingpos__|elbow rest|__onsurface__|knees to chest|knees together feet apart}
+sitting, {on bed|invisible chair|on chair|on couch|on floor}
+lying, {on back|on side|on stomach}, {0-3$$__onsurface__|spread legs|from above|knees up|leg up}
+lying, {1-3$$__onsurface__|spread legs|from above|knees up|leg up}
+{all fours|top-down bottom-up|fighting stance|reclining|squatting|yoga|cowering|stretching}

@@ -1,0 +1,14 @@
+__dresses__
+__tops__, __bottoms__
+__tops__
+__bottoms__
+{1-4$$__tops__, __bottoms__, __legs__, __acc__}
+underwear only
+school uniform, {1-3$$pleated skirt|skirt|black skirt}, {1-5$$shirt|__scun__|uwabaki|socks, __colors/socks__ socks|shoes}
+swimsuit
+__clothes/full__
+__clothes/full__, {1-3$$__acc__|__clothes/leg__|__clothes/shoes__}
+__clothes/top__, __clothes/bottom__
+__clothes/top__, __clothes/bottom__, __clothes/leg__, __clothes/shoes__
+__clothes/top__, __clothes/bottom__, __acc__
+{1-5$$__clothes/top__|__clothes/bottom__|__clothes/leg__|__clothes/shoes__|__acc__}

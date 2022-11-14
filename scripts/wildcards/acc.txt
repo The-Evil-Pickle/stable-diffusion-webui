@@ -1,0 +1,9 @@
+{glasses|sunglasses|monocle|goggles|glasses|glasses}
+hat
+gloves
+{headband|hairband|__dan/dan_scrunchie__}
+hat, {witch hat|__color__ headwear|beret|hat ribbon|tokin hat|peaked cap|baseball cap|budenovka|cabbie hat|deerstalker|kepi|mao cap|shako cap|bicorne|boater hat|bowler hat|bucket hat|campaign hat|cloche hat|cowbow hat|straw hat|fedora|female service cap|flat cap|gat|mob cap|pillow hat|pirate hat|pith helmet|porkpie hat|shampoo hat|sombrero|sun hat|top hat|tricorne|wizard hat|papakha|ushanka|bashlik|dixie cup hat|dunce cap|chef hat|beret|fez hat|fur hat|garrison cap|kippah|mian guan|mitre|mortarboard|nightcap|nurse cap|party hat|ging guanmao|sailor hat|sajkaca|santa hat|songkok|tam o' shanter|tate eboshi|tsunokakushi|animal hat|eggshell hat|pumpkin hat}
+crown
+{aviator cap|balaclava|bonnet|dalachi|habit|head scarf|hijab|jester cap|keffiyeh|okosozukin|shower cap|shufa guan|visor cap|veil|object on head}
+{aviator sunglasses|3d glasses|coke-bottle glasses|diving mask|fancy glasses|flight goggles|funny glasses|lorgnette|nodoka glasses|opaque glasses|opera glasses|pince-nez|safety glasses|shooting glasses|ski goggles|x-ray glasses|scouter|bespectacled|kamina shades|simon shades|heart-shaped eyewear|round eyewear|rectangular eyewear|triangular eyewear}
+{1-2$$mask|__dan/dan_mask__}

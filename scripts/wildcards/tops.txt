@@ -1,0 +1,11 @@
+{1-2$$shirt|__colors/shirt__ shirt}
+{1-3$$jacket|open jacket|__color__ jacket}
+{crop top|sweater|shirt|tube top|cardigan|camisole}
+breastplate
+{1-2$$bra|__colors/undies__ bra}
+sarashi
+shirt, {1-3$$__colors/shirt__ shirt|t-shirt|tied shirt}
+dress, {__colors/dress__ dress|maid}
+sweater, {1-3$$ribbed sweater|turtleneck|turtleneck sweater|aran sweater}
+{armor, breastplate, shirt|shirt, t-shirt, __colors/shirt__ shirt}
+{maid, black dress, dress|shirt, __colors/shirt__ shirt}, apron

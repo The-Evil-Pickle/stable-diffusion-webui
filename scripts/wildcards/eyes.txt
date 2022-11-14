@@ -1,0 +1,6 @@
+__colors/eyes__ eyes
+blue eyes
+green eyes
+brown eyes
+{purple eyes|pink eyes|red eyes|yellow eyes}
+{purple eyes|pink eyes|red eyes|yellow eyes|aqua eyes|orange eyes|grey eyes}

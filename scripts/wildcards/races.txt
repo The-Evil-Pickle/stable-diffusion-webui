@@ -1,0 +1,8 @@
+{dark-skinned female|dark skin}
+{1-2$$elf|pointy ears}
+[[virtual youtuber]]
+__animalgirls__, {0-3$$animal ears|tail|animal ear fluff|multiple tails}
+{giant|giantess}
+{old woman|child}
+{1-6$$demon|{{blue|red|purple|blue} skin, colored skin|dark skin}|horns|demon horns|demon wings|demon tail|demon girl}
+(pointy ears:-0.5)

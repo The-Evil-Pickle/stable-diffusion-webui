@@ -1,0 +1,12 @@
+white
+white
+white
+white
+black
+black
+black
+pink
+striped
+blue
+{red|purple}
+{yellow|green|polka dot|print}
